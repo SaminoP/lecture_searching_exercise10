@@ -49,6 +49,17 @@ def binary_search(seznam, cislo):
             l = x -1
     return None
 
+def main():
+
+    m = read_data('sequential.json', 'unordered_numbers')
+    if m:
+        cislo = 8
+        i = binary_search(m, cislo)
+
+        print(f"Zoznam je: {m}")
+        print(f"Hľadané číslo  je:{cislo} a je na indexe: {i}")
+    else:
+        print("Zlyhalo načítanie dát")
 
 
 if __name__ == "__main__":
