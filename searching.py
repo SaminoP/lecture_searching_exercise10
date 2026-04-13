@@ -33,5 +33,23 @@ def main():
 
 
 
+def binary_search(seznam, cislo):
+
+
+    l = 0
+    r = len(seznam) - 1
+
+    while l <= r:
+        x = (l + r)//2
+        if seznam[x] == cislo:
+            return x
+        elif cislo < seznam[x]:
+            r= x - 1
+        else:
+            l = x -1
+    return None
+
+
+
 if __name__ == "__main__":
     main()
