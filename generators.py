@@ -1,5 +1,6 @@
 from random import choices
-
+import json
+skuska
 
 def unordered_sequence(max_len=100):
     """
