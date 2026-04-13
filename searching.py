@@ -16,6 +16,20 @@ def main():
 
 def linear_search(sekvence, cislo):
 
+    x = []
+    for i, z in enumerate(sekvence):
+        if z == cislo:
+            x.append(i)
+
+    return {'positions': x, 'count': len(x)}
+
+def main():
+    f = read_data('sequential.json', 'unordered_numbers')
+    cislo = 8
+    l = linear_search(f, cislo)
+
+    print(f"Hľadané číslo: {cislo}")
+    print(f"Výsledok: {l}")
 
 
 
