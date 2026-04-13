@@ -98,6 +98,21 @@ def pattern_search(sekvencia, patern):
     s = len(sekvencia)
     ss = len(patern)
 
+    for i in range(s - ss + 1):
+        retazec = sekvencia[i:i+ss]
+        if retazec == patern:
+            x.add(i)
+    return x
+
+def main():
+    f = read_data('sequential.json', 'unordered_numbers')
+    if f :
+        target = "ATA"
+        vysledok = pattern_search(f)
+
+
+
+
 
 
 
