@@ -108,7 +108,10 @@ def main():
     f = read_data('sequential.json', 'unordered_numbers')
     if f :
         target = "ATA"
-        vysledok = pattern_search(f)
+        vysledok = pattern_search(f, target)
+        print(vysledok)
+        print(f"{len(vysledok)}")
+
 
 
 
