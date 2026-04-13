@@ -61,6 +61,47 @@ def main():
     else:
         print("Zlyhalo načítanie dát")
 
+from generators import ordered_sequence
+from searching import linear_search, binary_search
+
+    sizes = [100, 500, 1000, 5000, 10000]
+    linear_times = []
+    binary_times = []
+
+    for x in sizes:
+        t = 1000
+
+    r = time.perf_counter()
+    linear_search(x, t)
+    rr = time.perf_counter()
+    linear_times.append(rr - r)
+
+    s = time.perf_counter()
+    binary_search(x, t)
+    ss = time.perf_counter()
+    binary_times.append(ss - s)
+
+
+
+    import matplotlib.pyplot as plt
+
+    plt.plot(sizes, linear_times)
+    plt.plot(sizes, binary_times)
+    plt.xlabel("velkost vstupu")
+    plt.ylabel("cas s")
+    plt.title("graf- ukazka")
+    plt.show()
+
+
+def pattern_search(sekvencia, patern):
+    x = set()
+    s = len(sekvencia)
+    ss = len(patern)
+
+
+
+
+
 
 if __name__ == "__main__":
     main()
